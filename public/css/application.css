@@ -1,9 +1,16 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-family: "Bank Gothic", "Futura", "Arial";
 }
 th {
   text-align: left;
+}
+
+body {
+  background-image: url(/death_star.jpg);
 }
