@@ -18,9 +18,14 @@
   <title></title>
 </head>
 <body>
+  <% if session[:current_user] %>
+    <a href="/logout">Logout</a>
+  <% else %>
+    <a href="/login">Login</a>
+  <% end %>
   <div class="container">
     <h1>Nacker Hues Wars</h1>    
-    
+
     <%= yield %>
   <div>
 </body>

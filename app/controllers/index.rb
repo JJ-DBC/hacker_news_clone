@@ -1,5 +1,7 @@
 get '/' do
   @posts = Post.all
+
+
   erb :index
 end
 
@@ -27,5 +29,28 @@ end
 
 get '/user/:user_id/comments' do
 
-
 end
+
+get '/logout' do
+  session[:current_user] = nil
+  redirect to "/"
+end
+
+get '/create_post' do
+  
+  erb :create_post
+end
+
+post '/login' do
+  @user = User.find_by_username(params[:post][:username])
+  if @user && @user.authenticate(params[:post][:password])
+    session[:current_user] = @user.id
+  else
+    @error = "bad username or password"
+
+  erb :login
+  end
+
+  redirect to "/"
+end
+

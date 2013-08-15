@@ -1,15 +1,27 @@
+<div class="error">
+  <%if @error %>
+  <%= @error %>
+  <% end %>
+</div>
 <h2> Login </h2>
 <form action="/login" method="post" >
   <label for="user_name"></label>
-  <input id="user_name" type="text" name="post[username]" placeholder="please enter your user name">
+  <input id="user_name" type="text" name="post[username]" placeholder="please enter user name"><br><br>
+  <label for="password"></label>
+  <input id="password" type="password" name="post[password]" placeholder="please enter password">
+  <input type="submit" value="login">
 
 </form>
-
+<br>
 
 <h2> Signup </h2>
 
-<form action="/login" method="post" >
+<form action="/signup" method="post" >
   <label for="user_name"></label>
-  <input id="user_name" type="text" name="post[username]" placeholder="please enter your user name">
-  
+  <input id="user_name" type="text" name="post[username]" placeholder="please enter user name"><br><br>
+  <label for="password"></label>
+  <input id="password" type="password" name="post[password]" placeholder="please enter password"><br><br>
+  <label for="password_verification"></label>
+  <input id="password_verification" type="password" name="post[password_confirmation]" placeholder="please verify password">
+  <input type="submit" value="create account">
 </form>
