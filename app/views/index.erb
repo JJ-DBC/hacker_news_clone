@@ -1,3 +1,8 @@
-<div class="container">
-  <h1>Nacker Hues Wars</h1>
-</div>
+<a href=""
+
+<ol>
+  <% @posts.each do |post| %>
+  <li><a href="/post/<%=post.id %>"><%= post.title %></a><br />
+  <%= post.body %></li><br />
+  <% end %>
+</ol>
